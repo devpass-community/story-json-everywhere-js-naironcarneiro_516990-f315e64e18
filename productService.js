@@ -1,7 +1,11 @@
 async function getProduct(productId) {
-    const apiUrl = `https://fakestoreapi.com/products/${productId}`;
+  const apiUrl = `https://fakestoreapi.com/products/${productId}`;
 
-    // Add your solution here!
+  axios.get(apiUrl, {
+    params: {
+      productId: productId,
+    },
+  });
 }
 
 module.exports = getProduct;
